@@ -10,11 +10,16 @@
   "packageRules": [
     {
       "addLabels": ["main", "major"],
-      "automerge": false,
-      "description": "Disable automerge for major updates in Poetry main dependency group",
+      "description": "One week stability period for major updates in Poetry main dependency group",
       "matchDepTypes": ["dependencies"],
       "matchManagers": ["poetry"],
-      "matchUpdateTypes": ["major"]
+      "matchUpdateTypes": ["major"],
+      "minimumReleaseAge": "7 days"
+    },
+    {
+      "description": "Use ci semantic type for github deps",
+      "matchPaths": [".github/workflows/**"],
+      "semanticCommitType": "ci"
     }
   ],
   "platformAutomerge": true,
