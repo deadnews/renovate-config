@@ -17,8 +17,9 @@
       "minimumReleaseAge": "7 days"
     },
     {
-      "description": "Use ci semantic type for github deps",
-      "matchPaths": [".github/workflows/**"],
+      "addLabels": ["ci"],
+      "description": "Use ci semantic type for github actions",
+      "matchManagers": ["github-actions"],
       "semanticCommitType": "ci"
     }
   ],
