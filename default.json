@@ -17,9 +17,16 @@
       "minimumReleaseAge": "7 days"
     },
     {
-      "addLabels": ["ci"],
+      "addLabels": ["github-actions"],
       "description": "Use ci semantic type for github actions",
       "matchManagers": ["github-actions"],
+      "semanticCommitType": "ci"
+    },
+    {
+      "addLabels": ["pre-commit"],
+      "description": "Group all pre-commit updates together in one PR",
+      "groupName": "pre-commit hooks",
+      "matchManagers": ["pre-commit"],
       "semanticCommitType": "ci"
     }
   ],
