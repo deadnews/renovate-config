@@ -18,7 +18,8 @@
     },
     {
       "addLabels": ["github-actions"],
-      "description": "Use ci semantic type for github actions",
+      "description": "Group all github-actions updates together in one PR",
+      "groupName": "github actions",
       "matchManagers": ["github-actions"],
       "semanticCommitType": "ci"
     },
