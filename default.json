@@ -43,6 +43,6 @@
   "pre-commit": {
     "enabled": true
   },
-  "schedule": ["before 9am on the last day of the month"],
+  "schedule": ["before 9am on the second day of the month"],
   "semanticCommits": "enabled"
 }
