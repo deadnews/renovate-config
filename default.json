@@ -35,5 +35,6 @@
   "pre-commit": {
     "enabled": true
   },
+  "schedule": ["every 1 months on the second day of the month"],
   "semanticCommits": "enabled"
 }
