@@ -10,7 +10,7 @@
   "packageRules": [
     {
       "addLabels": ["main"],
-      "description": "3 days stability period for Poetry main-dependencies",
+      "description": "3 days stability period for Poetry main-deps",
       "matchDepTypes": ["dependencies"],
       "matchManagers": ["poetry"],
       "minimumReleaseAge": "3 days",
@@ -18,7 +18,7 @@
     },
     {
       "addLabels": ["dev"],
-      "description": "Group all Poetry dev-dependencies updates together in one PR",
+      "description": "Group all Poetry dev-deps updates together in one PR",
       "groupName": "dev-dependencies",
       "matchDepTypes": ["lint", "test", "docs"],
       "matchManagers": ["poetry"],
