@@ -20,7 +20,7 @@
       "addLabels": ["dev"],
       "description": "Group all Poetry dev-deps updates together in one PR",
       "groupName": "dev-dependencies",
-      "matchDepTypes": ["lint", "test", "docs"],
+      "matchDepTypes": ["dev", "lint", "test", "docs"],
       "matchManagers": ["poetry"],
       "rangeStrategy": "bump"
     },
