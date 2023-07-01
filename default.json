@@ -14,7 +14,7 @@
       "matchDepTypes": ["dependencies"],
       "matchManagers": ["poetry"],
       "minimumReleaseAge": "3 days",
-      "schedule": ["before 9am on saturday"]
+      "schedule": ["on Saturday"]
     },
     {
       "addLabels": ["dev"],
@@ -43,6 +43,8 @@
   "pre-commit": {
     "enabled": true
   },
-  "schedule": ["before 9am on the first day of the month"],
+  "schedule": [
+    "on Saturday every 4 weeks of the year starting on the 2th week"
+  ],
   "semanticCommits": "enabled"
 }
