@@ -10,10 +10,9 @@
   "packageRules": [
     {
       "addLabels": ["main"],
-      "description": "3 days stability period for Poetry main-deps",
+      "description": "Group all Poetry main-deps updates together in one PR",
       "matchDepTypes": ["dependencies"],
       "matchManagers": ["poetry"],
-      "minimumReleaseAge": "3 days",
       "schedule": ["on Saturday"]
     },
     {
