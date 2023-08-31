@@ -36,6 +36,12 @@
       "groupName": "pre-commit hooks",
       "matchManagers": ["pre-commit"],
       "semanticCommitType": "ci"
+    },
+    {
+      "addLabels": ["ansible-galaxy"],
+      "description": "Group all ansible-galaxy updates together in one PR",
+      "groupName": "ansible-galaxy requirements",
+      "matchManagers": ["ansible-galaxy"]
     }
   ],
   "platformAutomerge": true,
