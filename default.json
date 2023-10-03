@@ -46,9 +46,8 @@
     {
       "addLabels": ["docker"],
       "description": "Pin docker tags and Group all updates together in one PR",
-      "groupName": "docker digests",
-      "ignorePaths": [".python-version"],
-      "matchDatasources": ["docker"],
+      "groupName": "docker tags",
+      "matchManagers": ["docker-compose", "dockerfile"],
       "pinDigests": true
     }
   ],
