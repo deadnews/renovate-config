@@ -50,6 +50,12 @@
       "matchManagers": ["docker-compose", "dockerfile"],
       "pinDigests": true,
       "semanticCommitType": "build"
+    },
+    {
+      "allowedVersions": "<=3.1.5",
+      "description": "Disable updates for github action codecov-action",
+      "matchManagers": ["github-actions"],
+      "matchPackageNames": ["codecov/codecov-action"]
     }
   ],
   "platformAutomerge": true,
