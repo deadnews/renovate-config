@@ -1,4 +1,4 @@
-.PHONY: all clean checks
+.PHONY: all clean test checks
 
 checks: pc-run
 

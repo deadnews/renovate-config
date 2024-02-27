@@ -20,8 +20,13 @@
   "labels": ["deps"],
   "packageRules": [
     {
+      "addLabels": ["regex"],
+      "description": "Add label to all regex dependencies updates",
+      "matchManagers": ["regex"]
+    },
+    {
       "addLabels": ["main"],
-      "description": "Group all Poetry main-deps updates together in one PR",
+      "description": "Add label to all Poetry main-deps updates",
       "matchDepTypes": ["dependencies"],
       "matchManagers": ["poetry"],
       "schedule": ["on Saturday"]
