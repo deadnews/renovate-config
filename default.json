@@ -3,6 +3,17 @@
   "automerge": true,
   "automergeStrategy": "squash",
   "commitMessageAction": "update",
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Detect dependencies in Dockerfile",
+      "fileMatch": ["(^|/)Dockerfile[^/]*$"],
+      "matchStrings": [
+        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) dep_name=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sENV .*?_VERSION=\"(?<currentValue>.*)\"\\s"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+    }
+  ],
   "dependencyDashboard": true,
   "description": "Default preset for use with DeadNews's repos",
   "extends": ["config:base"],
@@ -62,16 +73,6 @@
   "pre-commit": {
     "enabled": true
   },
-  "regexManagers": [
-    {
-      "description": "Detect dependencies in Dockerfile",
-      "fileMatch": ["(^|/)Dockerfile[^/]*$"],
-      "matchStrings": [
-        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) dep_name=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sENV .*?_VERSION=\"(?<currentValue>.*)\"\\s"
-      ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
-    }
-  ],
   "schedule": [
     "on Saturday every 4 weeks of the year starting on the 2th week"
   ],
