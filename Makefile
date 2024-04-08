@@ -1,6 +1,6 @@
-.PHONY: all clean test checks
+.PHONY: all clean test checks pc
 
-checks: pc-run
+checks: pc
 
-pc-run:
+pc:
 	pre-commit run -a

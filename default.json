@@ -1,5 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "assignees": ["DeadNews"],
   "automerge": true,
   "automergeStrategy": "squash",
   "commitMessageAction": "update",
