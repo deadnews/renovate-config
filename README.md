@@ -2,7 +2,7 @@
 
 > Default preset for use with DeadNews's repos
 
-[![pre-commit.ci](https://results.pre-commit.ci/badge/github/DeadNews/renovate-config/main.svg)](https://results.pre-commit.ci/latest/github/DeadNews/renovate-config/main)
+[![CI: pre-commit](https://results.pre-commit.ci/badge/github/DeadNews/renovate-config/main.svg)](https://results.pre-commit.ci/latest/github/DeadNews/renovate-config/main)
 
 ## Custom regex managers:
 
