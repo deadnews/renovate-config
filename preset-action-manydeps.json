@@ -1,0 +1,12 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "regexManagers": [
+    {
+      "description": "Update references in the action.yml",
+      "fileMatch": ["^action\\.ya?ml$"],
+      "matchStrings": [
+        "default: \"?(?<currentValue>.+?)\"? # renovate: datasource=(?<datasource>[a-z-]+?) dep_name=(?<depName>[^\\s]+?)\\n"
+      ]
+    }
+  ]
+}

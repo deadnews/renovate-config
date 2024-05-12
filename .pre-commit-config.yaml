@@ -37,4 +37,4 @@ repos:
     rev: 0.28.2
     hooks:
       - id: check-renovate
-        files: ^(\.renovaterc|default)\.json$
+        files: ^(\.renovaterc|default|preset.+)\.json$
