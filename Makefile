@@ -1,4 +1,9 @@
-.PHONY: all clean test checks pc
+.PHONY: all clean default install checks test pc
+
+default: checks
+
+install:
+	pre-commit install
 
 checks: pc
 

@@ -13,6 +13,7 @@
       "matchStrings": [
         "#\\s*renovate:\\s*datasource=(?<datasource>.*?) dep_name=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sENV .*?_VERSION=\"(?<currentValue>.*)\"\\s"
       ],
+      "semanticCommitType": "build",
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
     }
   ],
