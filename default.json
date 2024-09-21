@@ -82,7 +82,7 @@
     "enabled": true
   },
   "schedule": [
-    "on Saturday every 4 weeks of the year starting on the 2th week"
+    "before 5am on Saturday every 4 weeks of the year starting on the 2th week"
   ],
   "semanticCommits": "enabled"
 }
