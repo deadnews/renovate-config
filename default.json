@@ -32,7 +32,9 @@
       "description": "Add label to all Poetry main-deps updates",
       "matchDepTypes": ["dependencies"],
       "matchManagers": ["poetry"],
-      "schedule": ["on Saturday"]
+      "schedule": [
+        "before 5am on Saturday every 2 weeks of the year starting on the 2th week"
+      ]
     },
     {
       "addLabels": ["dev"],
@@ -78,6 +80,7 @@
     }
   ],
   "platformAutomerge": true,
+  "prConcurrentLimit": 1,
   "pre-commit": {
     "enabled": true
   },
