@@ -33,7 +33,7 @@
       "matchDepTypes": ["dependencies"],
       "matchManagers": ["poetry"],
       "schedule": [
-        "before 5am on Saturday every 2 weeks of the year starting on the 2th week"
+        "before 10am on Saturday every 4 weeks of the year starting on the 2th week"
       ]
     },
     {
@@ -85,7 +85,7 @@
     "enabled": true
   },
   "schedule": [
-    "before 5am on Saturday every 4 weeks of the year starting on the 2th week"
+    "before 6am on Saturday every 4 weeks of the year starting on the 2th week"
   ],
   "semanticCommits": "enabled"
 }
