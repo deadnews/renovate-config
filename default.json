@@ -25,7 +25,7 @@
         "Image:\\s*\"(?<depName>[\\w\\-/]+):(?<currentValue>[\\w\\.\\-]+)\""
       ],
       "semanticCommitType": "test",
-      "versioningTemplate": "semver"
+      "versioningTemplate": "docker"
     }
   ],
   "dependencyDashboard": true,
