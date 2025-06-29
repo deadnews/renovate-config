@@ -15,6 +15,17 @@
       ],
       "semanticCommitType": "build",
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+    },
+    {
+      "customType": "regex",
+      "datasourceTemplate": "docker",
+      "description": "Detect Docker images in Go test files",
+      "fileMatch": ["main_test.go$"],
+      "matchStrings": [
+        "Image:\\s*\"(?<depName>[\\w\\-/]+):(?<currentValue>[\\w\\.\\-]+)\""
+      ],
+      "semanticCommitType": "test",
+      "versioningTemplate": "semver"
     }
   ],
   "dependencyDashboard": true,
@@ -85,7 +96,7 @@
     "enabled": true
   },
   "schedule": [
-    "before 6am on Saturday every 4 weeks of the year starting on the 2th week"
+    "before 11am on Saturday every 4 weeks of the year starting on the 2th week"
   ],
   "semanticCommits": "enabled"
 }
