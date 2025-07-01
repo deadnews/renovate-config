@@ -1,16 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "packageRules": [
+  "customManagers": [
     {
-      "addLabels": ["docs"],
-      "description": "Use docs semantic type for markdown files updates",
-      "matchPaths": ["**/*.md"],
-      "schedule": ["at any time"],
-      "semanticCommitType": "docs"
-    }
-  ],
-  "regexManagers": [
-    {
+      "customType": "regex",
       "datasourceTemplate": "github-tags",
       "description": "Update Github Action references in the markdown files",
       "fileMatch": ["\\.md$"],
@@ -19,6 +11,15 @@
         "\\suses: (?<depName>[\\w-]+/[\\w-]+)(?<path>/.*)?@(?<currentDigest>[a-z0-9]{40}|[a-z0-9]{64}) # (?<currentValue>v\\d+\\.\\d+\\.\\d+)"
       ],
       "versioningTemplate": "semver"
+    }
+  ],
+  "packageRules": [
+    {
+      "addLabels": ["docs"],
+      "description": "Use docs semantic type for markdown files updates",
+      "matchPaths": ["**/*.md"],
+      "schedule": ["at any time"],
+      "semanticCommitType": "docs"
     }
   ]
 }
