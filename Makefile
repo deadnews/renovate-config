@@ -1,11 +1,10 @@
-.PHONY: all clean default install checks test pc
+.PHONY: all clean default install check test pc
 
-default: checks
+default: check
 
 install:
 	pre-commit install
 
-checks: pc
-
+check: pc
 pc:
 	pre-commit run -a
