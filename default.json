@@ -39,28 +39,18 @@
       "matchManagers": ["regex"]
     },
     {
-      "addLabels": ["main"],
-      "description": "Add label to all Poetry main-deps updates",
-      "matchDepTypes": ["dependencies"],
-      "matchManagers": ["poetry"],
-      "schedule": [
-        "before 10am on Saturday every 4 weeks of the year starting on the 2th week"
-      ]
-    },
-    {
-      "addLabels": ["dev"],
-      "description": "Group all Poetry dev-deps updates together in one PR",
-      "groupName": "dev-dependencies",
-      "matchDepTypes": ["build", "dev", "docs", "lint", "runtime", "test"],
-      "matchManagers": ["poetry"],
-      "rangeStrategy": "bump"
-    },
-    {
       "addLabels": ["github-actions"],
       "description": "Group all github-actions updates together in one PR",
       "groupName": "github actions",
       "matchManagers": ["github-actions"],
       "semanticCommitType": "ci"
+    },
+    {
+      "description": "Refresh lock files for matching managers",
+      "lockFileMaintenance": {
+        "enabled": true
+      },
+      "matchManagers": ["pep621", "cargo"]
     },
     {
       "addLabels": ["pre-commit"],
