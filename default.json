@@ -34,13 +34,19 @@
   "labels": ["deps"],
   "packageRules": [
     {
+      "description": "Group packages by package manager",
+      "groupName": "{{manager}} dependencies",
+      "groupSlug": "{{manager}}",
+      "matchPackagePatterns": ["*"]
+    },
+    {
       "addLabels": ["regex"],
       "description": "Add label to all regex dependencies updates",
       "matchManagers": ["regex"]
     },
     {
       "addLabels": ["github-actions"],
-      "description": "Group all github-actions updates together in one PR",
+      "description": "Group all github-actions updates",
       "groupName": "github actions",
       "matchManagers": ["github-actions"],
       "semanticCommitType": "ci"
@@ -54,20 +60,20 @@
     },
     {
       "addLabels": ["pre-commit"],
-      "description": "Group all pre-commit updates together in one PR",
+      "description": "Group all pre-commit updates",
       "groupName": "pre-commit hooks",
       "matchManagers": ["pre-commit"],
       "semanticCommitType": "ci"
     },
     {
       "addLabels": ["ansible-galaxy"],
-      "description": "Group all ansible-galaxy updates together in one PR",
+      "description": "Group all ansible-galaxy updates",
       "groupName": "ansible-galaxy requirements",
       "matchManagers": ["ansible-galaxy"]
     },
     {
       "addLabels": ["docker"],
-      "description": "Pin docker tags and Group all updates together in one PR",
+      "description": "Pin docker tags and Group all updates",
       "groupName": "docker tags",
       "matchManagers": ["docker-compose", "dockerfile"],
       "pinDigests": true,
@@ -82,5 +88,6 @@
   "schedule": [
     "before 11am on Saturday every 4 weeks of the year starting on the 2th week"
   ],
-  "semanticCommits": "enabled"
+  "semanticCommits": "enabled",
+  "separateMajorMinor": false
 }
