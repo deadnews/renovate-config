@@ -19,7 +19,7 @@
     {
       "customType": "regex",
       "datasourceTemplate": "docker",
-      "description": "Detect Docker images in Go test files",
+      "description": "Testcontainers: detect Docker images",
       "fileMatch": ["main_test.go$"],
       "matchStrings": [
         "Image:\\s*\"(?<depName>[\\w\\-/]+):(?<currentValue>[\\w\\.\\-]+)\""
@@ -29,7 +29,7 @@
     }
   ],
   "dependencyDashboard": true,
-  "description": "Default preset for use with deadnews's repos",
+  "description": "Preset: update on the 1st Saturday of each month",
   "extends": ["config:base"],
   "labels": ["deps"],
   "packageRules": [
@@ -40,19 +40,14 @@
       "matchPackagePatterns": ["*"]
     },
     {
-      "addLabels": ["regex"],
-      "description": "Add label to all regex dependencies updates",
-      "matchManagers": ["regex"]
-    },
-    {
       "addLabels": ["github-actions"],
-      "description": "Group all github-actions updates",
+      "description": "GitHub Actions: group updates",
       "groupName": "github actions",
       "matchManagers": ["github-actions"],
       "semanticCommitType": "ci"
     },
     {
-      "description": "Refresh lock files for matching managers",
+      "description": "Lock files: refresh for matching managers",
       "lockFileMaintenance": {
         "enabled": true
       },
@@ -60,20 +55,20 @@
     },
     {
       "addLabels": ["pre-commit"],
-      "description": "Group all pre-commit updates",
+      "description": "Pre-commit: group updates",
       "groupName": "pre-commit hooks",
       "matchManagers": ["pre-commit"],
       "semanticCommitType": "ci"
     },
     {
       "addLabels": ["ansible-galaxy"],
-      "description": "Group all ansible-galaxy updates",
+      "description": "Ansible Galaxy: group updates",
       "groupName": "ansible-galaxy requirements",
       "matchManagers": ["ansible-galaxy"]
     },
     {
       "addLabels": ["docker"],
-      "description": "Pin docker tags and Group all updates",
+      "description": "Docker tags: group updates",
       "groupName": "docker tags",
       "matchManagers": ["docker-compose", "dockerfile"],
       "pinDigests": true,
@@ -85,9 +80,7 @@
   "pre-commit": {
     "enabled": true
   },
-  "schedule": [
-    "before 11am on Saturday every 4 weeks of the year starting on the 2th week"
-  ],
+  "schedule": ["* 0-10 1-7 * 6"],
   "semanticCommits": "enabled",
   "separateMajorMinor": false
 }

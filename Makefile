@@ -2,9 +2,9 @@
 
 default: check
 
-install:
-	pre-commit install
+update:
+	prek auto-update
 
 check: pc
 pc:
-	pre-commit run -a
+	prek run -a
