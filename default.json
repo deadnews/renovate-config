@@ -5,29 +5,6 @@
   "automerge": true,
   "automergeStrategy": "squash",
   "commitMessageAction": "update",
-  "customManagers": [
-    {
-      "customType": "regex",
-      "description": "Detect dependencies in Dockerfile",
-      "fileMatch": ["(^|/)Dockerfile[^/]*$"],
-      "matchStrings": [
-        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) dep_name=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sENV .*?_VERSION=\"(?<currentValue>.*)\"\\s"
-      ],
-      "semanticCommitType": "build",
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
-    },
-    {
-      "customType": "regex",
-      "datasourceTemplate": "docker",
-      "description": "Testcontainers: detect Docker images",
-      "fileMatch": ["main_test.go$"],
-      "matchStrings": [
-        "Image:\\s*\"(?<depName>[\\w\\-/]+):(?<currentValue>[\\w\\.\\-]+)\""
-      ],
-      "semanticCommitType": "test",
-      "versioningTemplate": "docker"
-    }
-  ],
   "dependencyDashboard": true,
   "description": "Preset: update on the 1st Saturday of each month",
   "extends": ["config:base"],
@@ -61,6 +38,12 @@
       "semanticCommitType": "ci"
     },
     {
+      "description": "typos: update once a year on Jan 1st",
+      "matchManagers": ["pre-commit"],
+      "matchPackageNames": ["crate-ci/typos"],
+      "schedule": ["* 16-23 1 1 *"]
+    },
+    {
       "addLabels": ["ansible-galaxy"],
       "description": "Ansible Galaxy: group updates",
       "groupName": "ansible-galaxy requirements",
@@ -68,10 +51,17 @@
     },
     {
       "addLabels": ["docker"],
-      "description": "Docker tags: group updates",
+      "description": "Docker tags: dockerfile",
       "groupName": "docker tags",
-      "matchManagers": ["docker-compose", "dockerfile"],
+      "matchManagers": ["dockerfile"],
       "pinDigests": true,
+      "semanticCommitType": "build"
+    },
+    {
+      "addLabels": ["docker"],
+      "description": "Docker tags: compose",
+      "groupName": "docker tags",
+      "matchManagers": ["docker-compose"],
       "semanticCommitType": "build"
     }
   ],
