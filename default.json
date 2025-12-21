@@ -26,7 +26,8 @@
     {
       "description": "Lock files: refresh for matching managers",
       "lockFileMaintenance": {
-        "enabled": true
+        "enabled": true,
+        "schedule": ["* * * * *"]
       },
       "matchManagers": ["pep621", "cargo"]
     },
