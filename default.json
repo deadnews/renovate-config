@@ -9,6 +9,10 @@
   "description": "Preset: update on the 1st Saturday of each month",
   "extends": ["config:base"],
   "labels": ["deps"],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["* * * * *"]
+  },
   "packageRules": [
     {
       "description": "Group packages by package manager",
@@ -22,14 +26,6 @@
       "groupName": "github actions",
       "matchManagers": ["github-actions"],
       "semanticCommitType": "ci"
-    },
-    {
-      "description": "Lock files: refresh for matching managers",
-      "lockFileMaintenance": {
-        "enabled": true,
-        "schedule": ["* * * * *"]
-      },
-      "matchManagers": ["pep621", "cargo"]
     },
     {
       "addLabels": ["pre-commit"],
