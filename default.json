@@ -11,7 +11,7 @@
   "labels": ["deps"],
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": ["* * * * *"]
+    "schedule": ["* 0 1-7 */2 6"]
   },
   "packageRules": [
     {
