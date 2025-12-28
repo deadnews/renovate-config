@@ -9,10 +9,6 @@
   "description": "Preset: update on the 1st Saturday of each month",
   "extends": ["config:base"],
   "labels": ["deps"],
-  "lockFileMaintenance": {
-    "enabled": true,
-    "schedule": ["* 0 1-7 */2 6"]
-  },
   "packageRules": [
     {
       "description": "Group packages by package manager",
@@ -39,12 +35,6 @@
       "matchManagers": ["pre-commit"],
       "matchPackageNames": ["crate-ci/typos"],
       "schedule": ["* 16-23 1 1 *"]
-    },
-    {
-      "addLabels": ["ansible-galaxy"],
-      "description": "Ansible Galaxy: group updates",
-      "groupName": "ansible-galaxy requirements",
-      "matchManagers": ["ansible-galaxy"]
     },
     {
       "addLabels": ["docker"],
