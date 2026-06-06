@@ -6,7 +6,7 @@
   "automergeStrategy": "squash",
   "commitMessageAction": "update",
   "dependencyDashboard": true,
-  "description": "Preset: update on the 1st Saturday of each month",
+  "description": "Preset: update on the 1st Saturday every 2 months",
   "extends": ["config:base"],
   "labels": ["deps"],
   "packageRules": [
@@ -57,7 +57,7 @@
   "pre-commit": {
     "enabled": true
   },
-  "schedule": ["* 0-10 1-7 * 6"],
+  "schedule": ["* 0-10 1-7 */2 6"],
   "semanticCommits": "enabled",
   "separateMajorMinor": false
 }

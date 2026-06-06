@@ -2,7 +2,7 @@
 
 > Default preset for use with DeadNews's repos
 
-[![CI: pre-commit](https://results.pre-commit.ci/badge/github/deadnews/renovate-config/main.svg)](https://results.pre-commit.ci/latest/github/deadnews/renovate-config/main)
+[![CI: Main](https://img.shields.io/github/actions/workflow/status/deadnews/mpv-config/main.yml?branch=main&logo=github&logoColor=white&label=main)](https://github.com/deadnews/mpv-config)
 
 ## Presets
 

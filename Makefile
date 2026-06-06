@@ -2,9 +2,10 @@
 
 default: check
 
-update:
-	prek auto-update
-
 check: pc
 pc:
 	prek run -a
+
+update:
+	prek auto-update --freeze
+	pinact run --update
