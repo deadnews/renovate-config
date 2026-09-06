@@ -1,4 +1,4 @@
-.PHONY: all clean default install check test pc
+.PHONY: check pc update
 
 default: check
 
@@ -7,5 +7,5 @@ pc:
 	prek run -a
 
 update:
-	prek auto-update --freeze
+	prek update
 	pinact run --update
