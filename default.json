@@ -6,6 +6,7 @@
   "automergeStrategy": "squash",
   "commitMessageAction": "update",
   "dependencyDashboard": true,
+  "dependencyDashboardApproval": true,
   "description": "Preset: update on the 1st Saturday every 2 months",
   "extends": ["config:base"],
   "labels": ["deps"],
