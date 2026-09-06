@@ -58,7 +58,7 @@
   "pre-commit": {
     "enabled": true
   },
-  "schedule": ["* 0-10 1-7 */2 6"],
+  "schedule": ["* 0-10 1-7 * 6"],
   "semanticCommits": "enabled",
   "separateMajorMinor": false
 }
