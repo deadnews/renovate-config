@@ -8,14 +8,14 @@
   "dependencyDashboard": true,
   "dependencyDashboardApproval": true,
   "description": "Preset: update on the 1st Saturday every 2 months",
-  "extends": ["config:base"],
+  "extends": ["config:recommended"],
   "labels": ["deps"],
   "packageRules": [
     {
       "description": "Group packages by package manager",
       "groupName": "{{manager}} dependencies",
       "groupSlug": "{{manager}}",
-      "matchPackagePatterns": ["*"]
+      "matchPackageNames": ["*"]
     },
     {
       "addLabels": ["github-actions"],
